@@ -11,21 +11,28 @@ import {
   Spacer,
 } from "@chakra-ui/react";
 import { Inter } from "@next/font/google";
+import Link from "next/link";
 
 const Header = () => {
   return (
     <Box ml={1}>
-      <HStack my={'2'}>
-        <Image src="/images/Logo.webp" w={'30'}  />
+      <HStack my={"2"}>
+        <Image src="/images/Logo.webp" w={"30"} />
         <List>
           <HStack
             spacing={{ sm: "2", md: "5", lg: "20", xl: "30" }}
             ml={{ sm: "2", md: "5", lg: "20", xl: "30" }}
             fontWeight="bold"
           >
-            <ListItem>Home</ListItem>
-            <ListItem>Contact</ListItem>
-            <ListItem>About</ListItem>
+            <Link href={"/"}>
+              <ListItem>HOME</ListItem>
+            </Link>
+            <Link href={"#"}>
+              <ListItem>MISSION</ListItem>
+            </Link>
+            <Link href={"#"}>
+              <ListItem>ABOUT US</ListItem>
+            </Link>
           </HStack>
         </List>
         <Spacer />
@@ -36,7 +43,7 @@ const Header = () => {
         </HStack>
       </HStack>
     </Box>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
